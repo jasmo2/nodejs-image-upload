@@ -45,4 +45,4 @@ En este enlace encontrarán la documentación oficial para crear el middleware y
 
 ## Exercise 3º
 
-Limitar la carga a maximo 3 archivos al timepo.
+Limitar la carga a maximo 3 archivos al tiempo.
