@@ -3,6 +3,7 @@ const express = require('express')
 const multer = require('multer')
 
 const app = express()
+app.set('view engine', 'ejs')
 
 const upload = multer({ dest: 'uploads/' })
 const uploadValidationImg = multer({
@@ -21,13 +22,17 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.get('/validation', (req, res) => {
+app.get('/validation', uploadValidationImg.single('my-file'), (req, res) => {
   res.render('validation')
 })
 
-app.post('/file-upload', upload.single('avatar'), (req, res) => {
-  // req.file es el archivo 'avatar', el nombre original se puede obtener
-  // con req.file.originalname
+app.post('/file-upload', upload.single('my-file'), (req, res) => {
+  /* req.file es el archivo 'my-file',
+   * el nombre original se puede obtener
+   * con req.file.originalname
+   */
+  console.log('req.file.originalname', req.file.originalname)
+  res.render('success-upload')
 })
 
 const port = process.env.PORT || 3000
