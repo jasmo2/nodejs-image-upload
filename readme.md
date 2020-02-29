@@ -25,3 +25,24 @@ Dentro de la carga de archivos usualmente se valida.
 ¿Pero qué se valida?
 
 El tipo de archivo que los usuarios suben.
+
+## Exercise 1º
+
+Dar estilos a los formularios.
+Pueden usar Bootstrap o Materilaze
+
+[https://materializecss.com/](https://materializecss.com/)
+
+## Exercise 2º
+
+Crear una nueva ruta, en la cual se pueda cargar más de un archivo.
+
+### HINT
+
+[https://github.com/expressjs/multer#arrayfieldname-maxcount](https://github.com/expressjs/multer#arrayfieldname-maxcount)
+
+En este enlace encontrarán la documentación oficial para crear el middleware y poder aceptar multiples archivos.
+
+## Exercise 3º
+
+Limitar la carga a maximo 3 archivos al timepo.
